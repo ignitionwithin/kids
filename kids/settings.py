@@ -30,6 +30,8 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
+MEDIA_ROOT = location("public/media")
+STATIC_ROOT = location('public/static')
 
 
 # Application definition
@@ -44,7 +46,8 @@ INSTALLED_APPS = [
                      'django.contrib.flatpages',
                      'django.contrib.sites',
                      'south',
-                     # 'compressor',
+                     'compressor',
+                     'django_extensions',
                  ] + get_core_apps()
 
 MIDDLEWARE_CLASSES = (
@@ -77,7 +80,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-RU'
 
 TIME_ZONE = 'UTC'
 
@@ -110,7 +113,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'oscar.apps.customer.auth_backends.EmailBackend',
+    'oscar.apps.customer.auth_backends.Emailbackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
@@ -130,3 +133,9 @@ HAYSTACK_CONNECTIONS = {
         'INCLUDE_SPELLING': True,
     },
 }
+
+#send email registration notification
+OSCAR_SEND_REGISTRATION_EMAIL = False
+
+# #shop name
+# OSCAR_SHOP_NAME = 'Baby food shop'
