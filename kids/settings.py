@@ -32,7 +32,7 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 MEDIA_ROOT = location("public/media")
 STATIC_ROOT = location('public/static')
-
+MEDIA_URL = '/media/'
 
 # Application definition
 
