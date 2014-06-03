@@ -138,4 +138,4 @@ HAYSTACK_CONNECTIONS = {
 OSCAR_SEND_REGISTRATION_EMAIL = False
 
 # #shop name
-# OSCAR_SHOP_NAME = 'Baby food shop'
+OSCAR_SHOP_NAME = 'Baby food shop'
